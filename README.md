@@ -7,3 +7,13 @@ This way is a bit superfluous, and you can use two other ways with JPQL query or
 This project shows all three approaches to select necessary objects from a database.
 
 Choose which of them best for you.  
+
+```java
+List<User> findAll();
+
+@Query(value = "select name, phone from \"user\"", nativeQuery = true)
+List<UserDto> findAllDto();
+
+@Query(value = "select new spring.dto.user.UserSnapshot(u.name, u.phone) from User u")
+List<UserSnapshot> findAllSnapshot();
+```
