@@ -1,0 +1,12 @@
+# Common application properties:
+# https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  datasource:
+    username: test
+    password: test
+    url: jdbc:postgresql://localhost:5439/test
